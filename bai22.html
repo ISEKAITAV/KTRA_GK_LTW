@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 22 - Chương 6: Portfolio với domain riêng</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="bai17.html">Bài 17</a>
+        <a href="bai18.html">Bài 18</a>
+        <a href="bai19.html">Bài 19</a>
+        <a href="bai20.html">Bài 20</a>
+        <a href="bai21.html">Bài 21</a>
+        <a href="bai22.html" aria-current="page">Bài 22</a>
+        <a href="denkeoquan.html">Đèn kéo quân</a>
+    </nav>
+
+    <header>
+        <h1>Bài tập 22: Chương 6, Bài thực hành số 8</h1>
+        <p>Portfolio chuyên nghiệp với domain riêng</p>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Đề bài</h2>
+            <p>Nâng cấp portfolio và đưa lên domain riêng, gồm các yêu cầu:</p>
+            <ul>
+                <li>Trang Projects với lưới 6 dự án bằng CSS Grid.</li>
+                <li>Form liên hệ chỉ dùng HTML, gửi qua Formspree.</li>
+                <li>Responsive theo hướng mobile first.</li>
+                <li>Animation khi scroll bằng Intersection Observer.</li>
+                <li>Nút chuyển dark mode bằng JavaScript.</li>
+                <li>Deploy lên Vercel hoặc Netlify, trỏ domain, bật HTTPS và dùng Cloudflare làm DNS trung gian.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Kết quả</h2>
+            <ul class="links">
+                <li><strong>Website (HTTPS):</strong> <a href="https://trananhvu.cc.cd/" target="_blank" rel="noopener">https://trananhvu.cc.cd/</a></li>
+                <li><strong>Source code (GitHub):</strong> <a href="https://github.com/ISEKAITAV/portfolio-prov2" target="_blank" rel="noopener">https://github.com/ISEKAITAV/portfolio-prov2</a></li>
+            </ul>
+            <ul>
+                <li>Deploy trên Vercel (project portfolio-prov2, môi trường Production, trạng thái Ready).</li>
+                <li>Domain <strong>trananhvu.cc.cd</strong> dùng nameserver Cloudflare: dana.ns.cloudflare.com và harley.ns.cloudflare.com.</li>
+                <li>Bản ghi DNS trên Cloudflare: <code>A</code> cho tên miền gốc trỏ về Vercel, <code>CNAME</code> cho <code>www</code> trỏ về Vercel. Địa chỉ <code>www.trananhvu.cc.cd</code> tự chuyển hướng 308 về <code>trananhvu.cc.cd</code>.</li>
+            </ul>
+            <p class="meta">Sinh viên: <span class="student-name"></span> - MSSV: <span class="student-id"></span></p>
+        </div>
+
+        <figure>
+            <img data-shot src="images/bai22-vercel.png" alt="Vercel: deployment portfolio-prov2 gắn domain trananhvu.cc.cd">
+            <figcaption>Vercel: deployment Ready, domain trananhvu.cc.cd, bản xem trước có ảnh chân dung và dark mode</figcaption>
+        </figure>
+        <figure>
+            <img data-shot src="images/bai22-dns.png" alt="Cloudflare: bản ghi DNS của trananhvu.cc.cd">
+            <figcaption>Cloudflare: bản ghi DNS của trananhvu.cc.cd</figcaption>
+        </figure>
+    </main>
+
+    <footer><span class="student-name"></span> - MSSV: <span class="student-id"></span></footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

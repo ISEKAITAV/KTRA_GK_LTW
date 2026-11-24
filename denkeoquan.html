@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 24 - Đèn kéo quân</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="bai17.html">Bài 17</a>
+        <a href="bai18.html">Bài 18</a>
+        <a href="bai19.html">Bài 19</a>
+        <a href="bai20.html">Bài 20</a>
+        <a href="bai21.html">Bài 21</a>
+        <a href="bai22.html">Bài 22</a>
+        <a href="denkeoquan.html" aria-current="page">Đèn kéo quân</a>
+    </nav>
+
+    <header>
+        <h1>Bài tập 24: Đèn kéo quân</h1>
+        <p>Web có hiệu ứng JavaScript</p>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Đề bài</h2>
+            <p>Lập trình trang web hiển thị 6 hình ảnh trên 6 mặt của đèn kéo quân và cho đèn quay vòng tròn. Khi đưa chuột vào một hình thì đèn dừng lại, rê chuột ra thì đèn quay tiếp. Deploy lên Netlify.</p>
+            <p class="meta">Sinh viên: <strong><span class="student-name"></span></strong> - MSSV: <strong><span class="student-id"></span></strong></p>
+        </div>
+        <div class="stage">
+            <div class="scene">
+                <div id="lantern">
+                    <div class="face"><img src="images/den1.jpg" alt="Ảnh 1 trên đèn kéo quân" draggable="false"></div>
+                    <div class="face"><img src="images/den2.jpg" alt="Ảnh 2 trên đèn kéo quân" draggable="false"></div>
+                    <div class="face"><img src="images/den3.jpg" alt="Ảnh 3 trên đèn kéo quân" draggable="false"></div>
+                    <div class="face"><img src="images/den4.jpg" alt="Ảnh 4 trên đèn kéo quân" draggable="false"></div>
+                    <div class="face"><img src="images/den5.jpg" alt="Ảnh 5 trên đèn kéo quân" draggable="false"></div>
+                    <div class="face"><img src="images/den6.jpg" alt="Ảnh 6 trên đèn kéo quân" draggable="false"></div>
+                </div>
+            </div>
+            <div class="controls">
+                <p id="status" aria-live="polite"></p>
+                <button id="toggle" class="btn" type="button">Dừng đèn</button>
+            </div>
+        </div>
+    </main>
+
+    <footer><span class="student-name"></span> - MSSV: <span class="student-id"></span></footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/lantern.js"></script>
+</body>
+</html>

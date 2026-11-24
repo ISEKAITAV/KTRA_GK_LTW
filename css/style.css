@@ -1,0 +1,104 @@
+:root {
+    --bg: #f4f4f4;
+    --text: #222;
+    --muted: #555;
+    --card: #fff;
+    --hero: #333;
+    --accent: #2f6fed;
+    --border: #d9d9d9;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.6; background: var(--bg); color: var(--text); }
+
+a { color: var(--accent); }
+img { max-width: 100%; display: block; }
+
+nav { background: var(--hero); padding: 0.75rem 1rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 0.5rem; }
+nav a { color: #fff; text-decoration: none; padding: 0.25rem 0.6rem; border-radius: 4px; }
+nav a:hover { text-decoration: underline; }
+nav a[aria-current="page"] { background: rgba(255, 255, 255, 0.2); }
+
+header { text-align: center; padding: 2.5rem 1rem; background: var(--hero); color: #fff; }
+header h1 { font-size: 1.6rem; line-height: 1.3; }
+header p { margin-top: 0.4rem; opacity: 0.9; }
+
+main { max-width: 1000px; margin: 0 auto; padding: 2rem 1rem; }
+h2 { margin-bottom: 0.75rem; }
+
+.card { background: var(--card); padding: 1.25rem; border-radius: 8px; box-shadow: var(--shadow); margin-bottom: 1rem; }
+
+/* Menu bài tập ở trang chủ: CSS Grid */
+.grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.grid .card { margin: 0; display: flex; flex-direction: column; gap: 0.4rem; }
+.grid .card p { color: var(--muted); flex-grow: 1; }
+.grid .card a.btn { align-self: flex-start; }
+
+.btn { display: inline-block; padding: 0.5rem 1.1rem; background: var(--accent); color: #fff; text-decoration: none; border: none; border-radius: 6px; font: inherit; cursor: pointer; }
+.btn:hover { filter: brightness(0.9); }
+
+figure { margin: 1rem 0; }
+figure img { width: 100%; border: 1px solid var(--border); border-radius: 6px; }
+figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.3rem; }
+
+.shot-missing { padding: 2rem 1rem; border: 2px dashed var(--border); border-radius: 6px; text-align: center; color: var(--muted); }
+
+.meta { color: var(--muted); }
+
+footer { text-align: center; padding: 2rem 1rem; color: var(--muted); }
+
+/* ---------- Đèn kéo quân ---------- */
+.stage { padding: 1rem 0 2rem; }
+
+.scene {
+    --w: clamp(110px, 26vw, 200px);
+    height: calc(var(--w) * 1.35);
+    perspective: 900px;
+    margin: 1.5rem auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lantern { position: relative; width: var(--w); height: calc(var(--w) * 1.25); transform-style: preserve-3d; }
+
+.face {
+    position: absolute;
+    inset: 0;
+    border: 3px solid #c0392b;
+    border-radius: 6px;
+    background: #fff;
+    overflow: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0 0 18px rgba(255, 190, 80, 0.55);
+    cursor: pointer;
+}
+
+.face img { width: 100%; height: 100%; object-fit: cover; }
+
+.controls { text-align: center; margin-top: 1rem; display: grid; gap: 0.6rem; justify-items: center; }
+#status { font-weight: 600; }
+
+/* ---------- Trang kết quả từng bài ---------- */
+.avatar { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; margin: 0 auto 1rem; }
+.card h2 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.card ul { padding-left: 1.25rem; }
+.card li + li { margin-top: 0.3rem; }
+.links { list-style: none; padding-left: 0 !important; display: grid; gap: 0.4rem; }
+.links a { overflow-wrap: anywhere; }
+.score { font-weight: 700; color: var(--accent); }
+.figs { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+.figs figure { margin: 0; }
+.portrait { max-width: 260px; margin: 0 auto; }
+
+@media (min-width: 600px) {
+    header h1 { font-size: 2rem; }
+    .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+    .grid { grid-template-columns: repeat(3, 1fr); }
+    .figs.two { grid-template-columns: repeat(2, 1fr); }
+}

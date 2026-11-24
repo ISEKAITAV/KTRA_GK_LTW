@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 18 - Upload website qua FTP</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="bai17.html">Bài 17</a>
+        <a href="bai18.html" aria-current="page">Bài 18</a>
+        <a href="bai19.html">Bài 19</a>
+        <a href="bai20.html">Bài 20</a>
+        <a href="bai21.html">Bài 21</a>
+        <a href="bai22.html">Bài 22</a>
+        <a href="denkeoquan.html">Đèn kéo quân</a>
+    </nav>
+
+    <header>
+        <h1>Bài tập 18: Upload website qua FTP</h1>
+        <p>Đẩy trang CV lên hosting miễn phí bằng FileZilla</p>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Đề bài</h2>
+            <p>Dùng FileZilla (hoặc WinSCP) kết nối vào hosting bằng tài khoản FTP, vào thư mục gốc của website (<code>htdocs</code> hoặc <code>public_html</code>) và kéo thả mã nguồn lên server. Chỉ cần một trang CV đơn giản có hình ảnh. Ghi lại địa chỉ website trên hosting.</p>
+        </div>
+
+        <div class="card">
+            <h2>Kết quả</h2>
+            <ul>
+                <li>Máy chủ FTP: <strong>ftpupload.net</strong>, thư mục gốc website: <strong>/htdocs</strong>.</li>
+                <li>Đã upload thư mục <code>css</code>, <code>images</code> và file <code>index.html</code>, hàng đợi báo 8 tệp truyền thành công.</li>
+            </ul>
+            <p><a class="btn" href="https://trananhvu-cv.page.gd/?i=1" target="_blank" rel="noopener">Mở trang CV</a></p>
+            <p class="meta">Link: <a href="https://trananhvu-cv.page.gd/?i=1" target="_blank" rel="noopener">https://trananhvu-cv.page.gd/?i=1</a></p>
+            <p class="meta">Sinh viên: <span class="student-name"></span> - MSSV: <span class="student-id"></span></p>
+        </div>
+
+        <figure>
+            <img data-shot src="images/bai18-filezilla.png" alt="FileZilla sau khi upload">
+            <figcaption>FileZilla sau khi upload lên thư mục /htdocs</figcaption>
+        </figure>
+        <figure>
+            <img data-shot src="images/bai18-web.png" alt="Trang CV trên hosting">
+            <figcaption>Trang CV chạy trên hosting</figcaption>
+        </figure>
+    </main>
+
+    <footer><span class="student-name"></span> - MSSV: <span class="student-id"></span></footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

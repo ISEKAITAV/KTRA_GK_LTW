@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 17 - Domain Name và Hosting</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="bai17.html" aria-current="page">Bài 17</a>
+        <a href="bai18.html">Bài 18</a>
+        <a href="bai19.html">Bài 19</a>
+        <a href="bai20.html">Bài 20</a>
+        <a href="bai21.html">Bài 21</a>
+        <a href="bai22.html">Bài 22</a>
+        <a href="denkeoquan.html">Đèn kéo quân</a>
+    </nav>
+
+    <header>
+        <h1>Bài tập 17: Domain Name và Hosting</h1>
+        <p>Đăng ký domain miễn phí và kiểm tra DNS</p>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Đề bài</h2>
+            <p>Đăng ký một tên miền miễn phí, vào trang quản lý để xem nameserver mặc định, sau đó mở Command Prompt và dùng lệnh <code>nslookup</code> để kiểm tra DNS đang hoạt động. Chụp màn hình kết quả.</p>
+        </div>
+
+        <div class="card">
+            <h2>Kết quả</h2>
+            <ul>
+                <li>Tên miền đã đăng ký: <strong>ahihi.work.gd</strong>, trạng thái <strong>Active</strong>.</li>
+                <li>Ngày đăng ký 22/11/2026, hết hạn 22/11/2027 (thời hạn 12 tháng).</li>
+                <li>Nameserver mặc định: ns10.dnsexit.com, ns11.dnsexit.com, ns12.dnsexit.com, ns13.dnsexit.com.</li>
+                <li>Lệnh <code>nslookup ahihi.work.gd</code> trả về địa chỉ IP <strong>103.199.43.184</strong> (kèm địa chỉ IPv6 64:ff9b::67c7:2bb8), chứng tỏ DNS hoạt động.</li>
+            </ul>
+            <p class="meta">Sinh viên: <span class="student-name"></span> - MSSV: <span class="student-id"></span></p>
+        </div>
+
+        <figure>
+            <img data-shot src="images/bai17-nslookup.png" alt="Kết quả lệnh nslookup ahihi.work.gd">
+            <figcaption>Kết quả lệnh nslookup</figcaption>
+        </figure>
+        <figure>
+            <img data-shot src="images/bai17-domain.png" alt="Trang quản lý tên miền ahihi.work.gd">
+            <figcaption>Trang quản lý tên miền (trạng thái, ngày đăng ký, nameserver)</figcaption>
+        </figure>
+    </main>
+
+    <footer><span class="student-name"></span> - MSSV: <span class="student-id"></span></footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
